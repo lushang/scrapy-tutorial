@@ -10,5 +10,6 @@ class TencentSpider(scrapy.spiders.Spider):
     ]
 
     def parse(self, response):
-        with open('tencent-recruiting.txt', 'wb') as f:
-            f.write(response.body)
+        print(f"Existing settings: {self.settings.attributes.get('MONGO_URI')}")
+        # with open('tencent-recruiting.txt', 'wb') as f:
+        #     f.write(response.body)
